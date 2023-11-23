@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double Range Slider</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="double-slider-box">
+        <div class="input-box">
+            <div class="min-box">
+                <div class="input-wrap">
+                     <input type="number" name="min-input" class="input-field min-input" onchange="setMinInput()" />
+                </div>
+            </div>
+
+            <div class="max-box">
+                <div class="input-wrap">
+                    <input type="number" name="max-input" class="input-field max-input" onchange="setMaxInput()" />
+                </div>
+            </div>
+        </div>  
+
+        <div class="range-slider">
+            <span class="slider-track"></span>
+            <input type="range" name="min-val" class="min-val" min="0" max="1500" value="100" oninput="rangeMin()" />
+            <input type="range" name="max-val" class="max-val" min="0" max="1500" value="900" oninput="rangeMax()" />
+            <div class="tooltip min-tooltip" style="display: none"></div>
+            <div class="tooltip max-tooltip" style="display: none"></div>
+        </div>      
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
